@@ -3,6 +3,7 @@ package it.marconi.helloworld.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 // stereotype annotation
 @Controller
@@ -21,6 +22,15 @@ public class HelloController {
         return "hello-world-param";
     }
 
-    // MVC
+    @GetMapping("model")
+    public String greetModel() {
+        return "hello-world-model";
+    }
+
+    // passaggio di parametri 
+    @ModelAttribute("name")
+    public String handlerNome() {
+        return "Marconi";
+    }
     
 }
