@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-// stereotype annotation
 @Controller
 @RequestMapping("/")
 public class HelloController {
@@ -27,10 +26,9 @@ public class HelloController {
         return "hello-world-model";
     }
 
-    // passaggio di parametri 
     @ModelAttribute("name")
     public String handlerNome() {
-        return "Marconi";
+        return "Thomas";
     }
     
 }

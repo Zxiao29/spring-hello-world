@@ -11,21 +11,18 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("other")
 public class HelloModelController {
     
-    // passa un parametro fisso tramite dizionario del Model
     @GetMapping("fixed")
     public ModelAndView greetAttribute() {
 
         return new ModelAndView("hello-world-model").addObject("name", "The Rock");
     }
 
-    // passa un parametro tramite query string
     @GetMapping("query")
     public ModelAndView greetParameter(@RequestParam(name = "name", defaultValue = "none") String name) {
 
         return new ModelAndView("hello-world-model").addObject("name", name);
     }
 
-    // passa un parametro recuperato dal path URL
     @GetMapping("/{username}")
     public ModelAndView greetPlaceholder(@PathVariable("username") String username) {
 
