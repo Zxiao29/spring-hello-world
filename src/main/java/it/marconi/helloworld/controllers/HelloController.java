@@ -28,7 +28,7 @@ public class HelloController {
 
     @ModelAttribute("name")
     public String handlerNome() {
-        return "Thomas, from JetBrains";
+        return "Thomas";
     }
     
 }
