@@ -16,7 +16,7 @@ public class HelloController {
         return "hello-world";
     }
 
-    @GetMapping(params = "papero")
+    @GetMapping(params = "param")
     public String greetParameter() {
         return "hello-world-param";
     }
@@ -28,7 +28,7 @@ public class HelloController {
 
     @ModelAttribute("name")
     public String handlerNome() {
-        return "Thomas";
+        return "Thomas, from JetBrains";
     }
     
 }
